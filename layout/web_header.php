@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parfumerie - Maroon Company</title>
+    <title>Parfumerie - Nan Company</title>
     <?php require_once './partials/head.php' ?>
 </head>
 <body>
