@@ -25,12 +25,12 @@ require_once 'layout/web_header.php';
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-6">
-            <div class="card shadow-lg border-0 rounded-4 bg-body-tertiary">
+            <div class="card shadow-sm border rounded-4 bg-white">
                 <div class="card-body p-5">
 
                     <div class="text-center mb-4">
-                        <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style="width:60px; height:60px;">
-                            <i class="bi bi-plus-circle-fill fs-3"></i>
+                        <div class="bg-dark text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width:60px; height:60px;">
+                            <i class="bi bi-plus-lg fs-3"></i>
                         </div>
                         <h3 class="fw-bold mb-0">Tambah Produk</h3>
                         <p class="text-secondary small">Masukkan data parfum baru ke sistem</p>
@@ -86,7 +86,7 @@ require_once 'layout/web_header.php';
                             <label for="deskripsi"><i class="bi bi-card-text me-2"></i>Deskripsi</label>
                         </div>
 
-                        <button class="btn btn-warning w-100 py-3 rounded-pill fw-bold shadow-sm mb-3 text-dark" type="submit">
+                        <button class="btn btn-dark w-100 py-3 rounded-pill fw-bold shadow-sm mb-3" type="submit">
                             <i class="bi bi-save me-2"></i>Simpan Data
                         </button>
                         <a href="index.php" class="btn btn-outline-secondary w-100 py-2 rounded-pill">

@@ -23,12 +23,12 @@ require_once 'layout/web_header.php';
 
         <!-- Form Kontak -->
         <div class="col-lg-6">
-            <div class="card border-0 shadow-sm bg-body-tertiary rounded-4">
+            <div class="card border shadow-sm bg-white rounded-4">
                 <div class="card-body p-5">
 
                     <div class="text-center mb-4">
-                        <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-inline-flex justify-content-center align-items-center mb-3" style="width:60px; height:60px;">
-                            <i class="bi bi-envelope-fill fs-3"></i>
+                        <div class="bg-dark text-white rounded-circle d-inline-flex justify-content-center align-items-center mb-3 shadow-sm" style="width:60px; height:60px;">
+                            <i class="bi bi-envelope fs-3"></i>
                         </div>
                         <h3 class="fw-bold mb-0">Hubungi Kami</h3>
                         <p class="text-secondary small">Kami siap membantu pertanyaan Anda</p>
@@ -65,7 +65,7 @@ require_once 'layout/web_header.php';
                             <label for="pesan"><i class="bi bi-chat-left-text me-2"></i>Pesan</label>
                         </div>
 
-                        <button class="btn btn-warning w-100 py-3 rounded-pill fw-bold text-dark" type="submit">
+                        <button class="btn btn-dark w-100 py-3 rounded-pill fw-bold text-white shadow-sm" type="submit">
                             <i class="bi bi-send me-2"></i>Kirim Pesan
                         </button>
                     </form>
@@ -76,9 +76,9 @@ require_once 'layout/web_header.php';
 
         <!-- Info Kontak -->
         <div class="col-lg-4">
-            <div class="card border-0 shadow-sm bg-body-tertiary rounded-4 h-100">
+            <div class="card border shadow-sm bg-white rounded-4 h-100">
                 <div class="card-body p-4">
-                    <h5 class="fw-bold mb-4"><i class="bi bi-geo-alt-fill text-warning me-2"></i>Informasi Kontak</h5>
+                    <h5 class="fw-bold mb-4"><i class="bi bi-geo-alt-fill text-dark me-2"></i>Informasi Kontak</h5>
 
                     <div class="d-flex flex-column gap-4">
                         <?php
@@ -92,7 +92,7 @@ require_once 'layout/web_header.php';
                         foreach ($info as $item):
                         ?>
                         <div class="d-flex align-items-start gap-3">
-                            <div class="bg-warning bg-opacity-10 text-warning rounded-3 d-flex justify-content-center align-items-center flex-shrink-0" style="width:40px; height:40px;">
+                            <div class="bg-light border text-dark rounded-3 d-flex justify-content-center align-items-center flex-shrink-0" style="width:40px; height:40px;">
                                 <i class="bi <?= $item['icon'] ?>"></i>
                             </div>
                             <div>

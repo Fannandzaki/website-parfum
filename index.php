@@ -19,16 +19,16 @@ require_once 'layout/web_header.php';
     <div class="row justify-content-center">
         <div class="col-lg-11">
 
-            <div class="card shadow-lg border-0 rounded-4 bg-body-tertiary">
+            <div class="card shadow-sm border rounded-4 bg-white">
 
                 <div class="card-header border-0 bg-transparent d-flex justify-content-between align-items-center p-4">
                     <div>
                         <h4 class="mb-0 fw-bold">
-                            <i class="bi bi-droplet-fill text-warning me-2"></i>Data Produk Parfum
+                            <i class="bi bi-droplet-fill text-dark me-2"></i>Data Produk Parfum
                         </h4>
                         <p class="text-secondary mb-0 small">Parfumerie &mdash; Nan Company</p>
                     </div>
-                    <a href="tambah.php" class="btn btn-warning rounded-pill px-4 shadow-sm text-dark fw-bold">
+                    <a href="tambah.php" class="btn btn-dark rounded-pill px-4 shadow-sm fw-bold">
                         <i class="bi bi-plus-lg me-1"></i>Tambah Produk
                     </a>
                 </div>
@@ -36,7 +36,7 @@ require_once 'layout/web_header.php';
                 <div class="card-body p-0">
                     <div class="table-responsive">
                         <table class="table table-hover align-middle mb-0">
-                            <thead class="table-dark">
+                            <thead class="border-bottom">
                                 <tr>
                                     <th class="ps-4">#</th>
                                     <th>Nama Parfum</th>
@@ -53,7 +53,7 @@ require_once 'layout/web_header.php';
                                     <td class="ps-4 fw-medium text-secondary"><?= $index + 1 ?></td>
                                     <td>
                                         <div class="d-flex align-items-center py-1">
-                                            <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex justify-content-center align-items-center me-3" style="width:40px; height:40px;">
+                                            <div class="bg-light border text-dark rounded-circle d-flex justify-content-center align-items-center me-3" style="width:40px; height:40px;">
                                                 <i class="bi bi-droplet fs-5"></i>
                                             </div>
                                             <div>
@@ -64,27 +64,20 @@ require_once 'layout/web_header.php';
                                     </td>
                                     <td><?= htmlspecialchars($row['brand']) ?></td>
                                     <td class="text-center">
-                                        <?php
-                                        $badgeClass = match($row['kategori']) {
-                                            'Pria'   => 'bg-primary',
-                                            'Wanita' => 'bg-pink',
-                                            default  => 'bg-secondary'
-                                        };
-                                        ?>
-                                        <span class="badge <?= $badgeClass ?> bg-opacity-25 px-3 py-2 rounded-pill border border-<?= $row['kategori']==='Pria'?'primary':($row['kategori']==='Wanita'?'danger':'secondary') ?> border-opacity-25">
+                                        <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">
                                             <?= htmlspecialchars($row['kategori']) ?>
                                         </span>
                                     </td>
-                                    <td class="text-center fw-semibold text-warning">
+                                    <td class="text-center fw-bold text-dark">
                                         Rp <?= number_format($row['harga'], 0, ',', '.') ?>
                                     </td>
                                     <td class="text-center">
-                                        <span class="badge <?= $row['stok'] > 0 ? 'bg-success' : 'bg-danger' ?> bg-opacity-25 px-3 py-2 rounded-pill">
+                                        <span class="badge <?= $row['stok'] > 0 ? 'bg-dark text-white' : 'bg-light text-secondary border' ?> px-3 py-2 rounded-pill">
                                             <?= $row['stok'] ?> pcs
                                         </span>
                                     </td>
                                     <td class="text-center">
-                                        <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-warning rounded-circle me-1" title="Edit">
+                                        <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-outline-dark rounded-circle me-1" title="Edit">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
                                         <form method="POST" action="" class="d-inline"
@@ -103,7 +96,7 @@ require_once 'layout/web_header.php';
                                     <td colspan="7" class="text-center py-5">
                                         <i class="bi bi-inbox fs-1 text-secondary d-block mb-3"></i>
                                         <p class="text-secondary mb-0">Belum ada produk yang terdaftar.</p>
-                                        <a href="tambah.php" class="btn btn-warning btn-sm mt-3 rounded-pill px-4 text-dark fw-bold">
+                                        <a href="tambah.php" class="btn btn-dark btn-sm mt-3 rounded-pill px-4 fw-bold">
                                             <i class="bi bi-plus-lg me-1"></i>Tambah Produk Pertama
                                         </a>
                                     </td>

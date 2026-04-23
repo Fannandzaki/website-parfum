@@ -23,18 +23,18 @@ require_once 'layout/web_header.php';
 
     <!-- Page Title -->
     <div class="mb-4">
-        <h4 class="fw-bold"><i class="bi bi-grid-fill text-warning me-2"></i>Katalog Parfum</h4>
+        <h4 class="fw-bold"><i class="bi bi-grid-fill text-dark me-2"></i>Katalog Parfum</h4>
         <p class="text-secondary small">Temukan parfum pilihan Anda</p>
     </div>
 
     <!-- Filter Kategori -->
     <div class="mb-4 d-flex gap-2 flex-wrap">
-        <a href="katalog.php" class="btn btn-sm rounded-pill <?= $kategori_filter === '' ? 'btn-warning text-dark fw-bold' : 'btn-outline-secondary' ?>">
+        <a href="katalog.php" class="btn btn-sm rounded-pill <?= $kategori_filter === '' ? 'btn-dark fw-bold' : 'btn-outline-secondary' ?>">
             Semua
         </a>
         <?php foreach (['Pria', 'Wanita', 'Unisex'] as $kat): ?>
         <a href="katalog.php?kategori=<?= $kat ?>"
-           class="btn btn-sm rounded-pill <?= $kategori_filter === $kat ? 'btn-warning text-dark fw-bold' : 'btn-outline-secondary' ?>">
+           class="btn btn-sm rounded-pill <?= $kategori_filter === $kat ? 'btn-dark fw-bold' : 'btn-outline-secondary' ?>">
             <?= $kat ?>
         </a>
         <?php endforeach; ?>
@@ -44,15 +44,15 @@ require_once 'layout/web_header.php';
     <div class="row g-4">
         <?php foreach ($dataProduk as $row): ?>
         <div class="col-sm-6 col-lg-4">
-            <div class="card h-100 border-0 shadow-sm bg-body-tertiary rounded-4">
+            <div class="card h-100 border shadow-sm bg-white rounded-4">
                 <div class="card-body p-4">
 
                     <!-- Icon & Badge -->
                     <div class="d-flex justify-content-between align-items-start mb-3">
-                        <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex justify-content-center align-items-center" style="width:50px; height:50px;">
+                        <div class="bg-light border text-dark rounded-circle d-flex justify-content-center align-items-center" style="width:50px; height:50px;">
                             <i class="bi bi-droplet-fill fs-4"></i>
                         </div>
-                        <span class="badge bg-secondary bg-opacity-25 text-light rounded-pill px-3">
+                        <span class="badge bg-light border text-dark rounded-pill px-3 py-2">
                             <?= htmlspecialchars($row['kategori']) ?>
                         </span>
                     </div>
@@ -66,17 +66,17 @@ require_once 'layout/web_header.php';
 
                     <!-- Harga & Stok -->
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="fw-bold text-warning fs-5">
+                        <span class="fw-bold text-dark fs-5">
                             Rp <?= number_format($row['harga'], 0, ',', '.') ?>
                         </span>
-                        <span class="badge <?= $row['stok'] > 0 ? 'bg-success' : 'bg-danger' ?> bg-opacity-25 rounded-pill px-3">
+                        <span class="badge <?= $row['stok'] > 0 ? 'bg-dark text-white' : 'bg-light text-secondary border' ?> rounded-pill px-3 py-2">
                             Stok: <?= $row['stok'] ?>
                         </span>
                     </div>
 
                 </div>
                 <div class="card-footer bg-transparent border-0 px-4 pb-4 pt-0 d-flex gap-2">
-                    <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-outline-warning btn-sm flex-fill rounded-pill">
+                    <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-outline-dark btn-sm flex-fill rounded-pill">
                         <i class="bi bi-pencil me-1"></i>Edit
                     </a>
                     <form method="POST" action="index.php" class="flex-fill"
@@ -95,7 +95,7 @@ require_once 'layout/web_header.php';
         <div class="col-12 text-center py-5">
             <i class="bi bi-inbox fs-1 text-secondary d-block mb-3"></i>
             <p class="text-secondary">Tidak ada produk ditemukan.</p>
-            <a href="tambah.php" class="btn btn-warning btn-sm rounded-pill px-4 text-dark fw-bold">
+            <a href="tambah.php" class="btn btn-dark btn-sm rounded-pill px-4 fw-bold">
                 <i class="bi bi-plus-lg me-1"></i>Tambah Produk
             </a>
         </div>

@@ -1,11 +1,11 @@
 </main>
 
-<footer class="bg-dark border-top border-secondary mt-5 py-4">
+<footer class="bg-white border-top mt-5 py-4">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
                 <span class="text-secondary small">
-                    <i class="bi bi-droplet-fill text-warning me-1"></i>
+                    <i class="bi bi-droplet-fill text-dark me-1"></i>
                     &copy; <?= date('Y') ?> Parfumerie &mdash; Nan Company
                 </span>
             </div>
